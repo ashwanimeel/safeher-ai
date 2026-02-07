@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHer AI - Ultra Advance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-frame">
+        <div class="scanner-line"></div>
+        
+        <div class="header">
+            <h1>SAFEHER AI</h1>
+            <p style="font-size: 8px; color: #888; letter-spacing: 2px;">NEURAL EMERGENCY RESPONSE SYSTEM</p>
+        </div>
+
+        <div class="risk-module">
+            <div class="risk-gauge">
+                <span class="risk-value" id="risk-val">0%</span>
+                <span style="font-size: 8px; color: #555;">AI RISK INDEX</span>
+            </div>
+        </div>
+
+        <div class="grid-features">
+            <div class="feat-card" onclick="fetchPolice()">
+                <div style="font-size: 16px;">📍</div>
+                <div style="font-size: 8px;">POLICE</div>
+            </div>
+            <div class="feat-card" onclick="addLog('Analyzing environment noise...')">
+                <div style="font-size: 16px;">🎤</div>
+                <div style="font-size: 8px;">AUDIO</div>
+            </div>
+            <div class="feat-card" onclick="toggleSiren()">
+                <div style="font-size: 16px;">🚨</div>
+                <div style="font-size: 8px;">SIREN</div>
+            </div>
+        </div>
+
+        <div class="sos-trigger">
+            <div class="pulse"></div>
+            <button class="sos-btn" id="sos-btn" onclick="executeSOS('Manual Trigger')">SOS</button>
+        </div>
+
+        <div class="terminal-box" id="log-box">
+            </div>
+
+        <div class="status-lights">
+            <span class="active-light">● GPS Active</span>
+            <span class="active-light">● Mic On</span>
+            <span class="active-light">● ML Engine</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
